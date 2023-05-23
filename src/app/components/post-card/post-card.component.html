@@ -1,0 +1,21 @@
+<mat-card *ngIf="post" class="card">
+  <mat-card-header>
+    <mat-card-title>{{post.title}}</mat-card-title>
+    <mat-card-subtitle>{{post.author}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{post.thumbnail}}" alt="{{post.title}}">
+  <mat-card-content>
+    <p>
+      {{post.selftext}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a href="https://www.reddit.com{{post.permalink}}">
+      <button mat-button>REDDIT</button>
+    </a>
+    <a href="{{post.url}}">
+      <button mat-button>URL</button>
+    </a>
+
+  </mat-card-actions>
+</mat-card>
